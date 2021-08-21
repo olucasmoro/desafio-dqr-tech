@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/lucas/softwares/github/desafio-dqr-tech/app/src/main/res/layout/converter_fragment.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/lucas/softwares/github/desafio-dqr-tech/app/src/main/res/layout/currency_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/lucas/softwares/github/desafio-dqr-tech/app/src/main/res/layout/currency_list_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/lucas/softwares/github/desafio-dqr-tech/app/src/main/res/layout/main_activity.xml" value="0.2741477272727273" />
+        <entry key="..\:/Users/lucas/softwares/github/desafio-dqr-tech/app/src/main/res/layout/main_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/lucas/softwares/github/desafio-dqr-tech/app/src/main/res/layout/tes.xml" value="0.1" />
         <entry key="..\:/Users/lucas/softwares/github/desafio-mobile/app/src/main/res/layout/currency_item.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/lucas/softwares/github/desafio-mobile/app/src/main/res/layout/currency_list_fragment.xml" value="0.28703703703703703" />
         <entry key="..\:/Users/lucas/softwares/github/desafio-mobile/app/src/main/res/layout/main_activity.xml" value="0.1" />

@@ -1,4 +1,4 @@
-package olucasmoro.android.desafiodqrtech.presenter.iu
+package olucasmoro.android.desafiodqrtech.presenter.iu.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

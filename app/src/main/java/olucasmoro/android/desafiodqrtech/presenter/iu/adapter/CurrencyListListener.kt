@@ -1,4 +1,4 @@
-package olucasmoro.android.desafiodqrtech.presenter.iu
+package olucasmoro.android.desafiodqrtech.presenter.iu.adapter
 
 import olucasmoro.android.desafiodqrtech.data.local.model.Currency
 

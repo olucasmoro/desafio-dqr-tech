@@ -1,4 +1,4 @@
-package olucasmoro.android.desafiodqrtech.presenter.iu
+package olucasmoro.android.desafiodqrtech.presenter.iu.fragment
 
 import android.os.Bundle
 import android.text.Editable
@@ -11,6 +11,9 @@ import com.google.android.material.snackbar.Snackbar
 import olucasmoro.android.desafiodqrtech.R
 import olucasmoro.android.desafiodqrtech.data.local.model.Currency
 import olucasmoro.android.desafiodqrtech.databinding.CurrencyListFragmentBinding
+import olucasmoro.android.desafiodqrtech.presenter.iu.ConvertViewModel
+import olucasmoro.android.desafiodqrtech.presenter.iu.adapter.CurrencyAdapter
+import olucasmoro.android.desafiodqrtech.presenter.iu.adapter.CurrencyListListener
 import olucasmoro.android.desafiodqrtech.presenter.util.*
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
@@ -19,7 +22,7 @@ class CurrencyListFragment : Fragment() {
     private var _binding: CurrencyListFragmentBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel: ConversorViewModel by sharedViewModel<ConversorViewModel>()
+    private val viewModel: ConvertViewModel by sharedViewModel<ConvertViewModel>()
 
     private val mAdapter: CurrencyAdapter = CurrencyAdapter()
     private lateinit var mListener: CurrencyListListener

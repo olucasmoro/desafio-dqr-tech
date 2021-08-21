@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/converterFragment"
-        android:name="olucasmoro.android.desafiodqrtech.presenter.iu.ConverterFragment"
+        android:name="olucasmoro.android.desafiodqrtech.presenter.iu.fragment.ConverterFragment"
         android:label="@string/converter"
-        tools:layout="@layout/main_fragment">
+        tools:layout="@layout/converter_fragment">
         <argument
             android:name="type"
             app:nullable="true"
@@ -24,7 +24,7 @@
 
     <fragment
         android:id="@+id/currencyListFragment"
-        android:name="olucasmoro.android.desafiodqrtech.presenter.iu.CurrencyListFragment"
+        android:name="olucasmoro.android.desafiodqrtech.presenter.iu.fragment.CurrencyListFragment"
         android:label="@string/select_currency"
         tools:layout="@layout/currency_list_fragment">
         <argument

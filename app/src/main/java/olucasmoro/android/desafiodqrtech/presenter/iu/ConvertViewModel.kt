@@ -12,8 +12,10 @@ import olucasmoro.android.desafiodqrtech.data.local.model.Resource
 import olucasmoro.android.desafiodqrtech.data.network.model.ExchangeDTO
 import olucasmoro.android.desafiodqrtech.domain.repository.AppRepositoryData
 import olucasmoro.android.desafiodqrtech.domain.repository.TitleRefreshError
+import olucasmoro.android.desafiodqrtech.presenter.util.SELECT_CURRENCY_DESTINATION
+import olucasmoro.android.desafiodqrtech.presenter.util.SELECT_CURRENCY_SOURCE
 
-class ConversorViewModel(
+class ConvertViewModel(
     private val repository: AppRepositoryData
 ) : ViewModel() {
 
@@ -33,7 +35,17 @@ class ConversorViewModel(
 
     var currencySource = MutableLiveData<Currency>()
     var currencyDestination = MutableLiveData<Currency>()
-    var resultConverter = MutableLiveData<String>()
+
+    fun verifyFields(): Boolean {
+        if (currencySource.value?.name.isNullOrEmpty()) {
+            _snackBar.value = SELECT_CURRENCY_SOURCE
+            return false
+        } else if (currencyDestination.value?.name.isNullOrEmpty()) {
+            _snackBar.value = SELECT_CURRENCY_DESTINATION
+            return false
+        }
+        return true
+    }
 
     fun converterValue(
         source: String,

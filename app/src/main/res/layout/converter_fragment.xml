@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".presenter.iu.fragment.ConverterFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/begin_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/end_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/text_convert_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/convert_from"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="@id/button_source_currency"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/button_destination_currency"
+            app:layout_constraintTop_toTopOf="@id/text_convert_from" />
+
+        <Button
+            android:id="@+id/button_source_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:minHeight="48dp"
+            android:text="@string/select_currency"
+            app:layout_constraintEnd_toStartOf="@id/button_destination_currency"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="@id/begin_margin"
+            app:layout_constraintTop_toBottomOf="@id/text_convert_from" />
+
+
+        <Button
+            android:id="@+id/button_destination_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/select_currency"
+            app:layout_constraintEnd_toEndOf="@id/end_margin"
+            app:layout_constraintStart_toEndOf="@id/button_source_currency"
+            app:layout_constraintTop_toTopOf="@id/button_source_currency" />
+
+        <TextView
+            android:id="@+id/text_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:text="@string/value"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/ipt_layout"
+            app:layout_constraintStart_toStartOf="@+id/ipt_layout"
+            app:layout_constraintTop_toBottomOf="@+id/button_source_currency" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ipt_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            app:placeholderText="@string/r_0_00"
+            android:textColorHint="@color/white"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="@+id/button_convert"
+            app:layout_constraintStart_toStartOf="@+id/button_convert"
+            app:layout_constraintTop_toBottomOf="@id/text_value">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_value_conversion"
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!--        <EditText-->
+<!--            android:id="@+id/edit_value_conversion"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="6dp"-->
+<!--            android:background="@null"-->
+<!--            android:hint="@string/r_0_00"-->
+<!--            android:imeOptions="actionDone"-->
+<!--            android:inputType="numberDecimal"-->
+<!--            android:minHeight="48dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/text_value" />-->
+
+        <Button
+            android:id="@+id/button_convert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/convert"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ipt_layout" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/result_convert"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/begin_margin"
+            app:layout_constraintEnd_toEndOf="@id/end_margin"
+            app:layout_constraintTop_toBottomOf="@+id/button_convert" />
+
+        <TextView
+            android:id="@+id/text_result_convert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/r_0_00"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

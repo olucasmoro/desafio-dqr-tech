@@ -4,8 +4,9 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="colorWhite">#FFFFFF</color>
-    <color name="colorAccent">#48484A</color>
-    <color name="colorPrimary">#1C1C1E</color>
+    <color name="colorAccent">#285BD5</color>
+    <color name="colorPrimary">#285BD5</color>
+    <color name="colorBackground">#EBF2FF</color>
     <color name="colorPrimaryDark">#263238</color>
     <color name="colorTextPrimary">#000000</color>
 </resources>

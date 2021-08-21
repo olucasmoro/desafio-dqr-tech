@@ -9,14 +9,14 @@
 
         <variable
             name="listViewModel"
-            type="olucasmoro.android.desafiodqrtech.presenter.iu.ConversorViewModel" />
+            type="olucasmoro.android.desafiodqrtech.presenter.iu.ConvertViewModel" />
     </data>
 
     <FrameLayout
         android:id="@+id/root_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".presenter.iu.CurrencyListFragment">
+        tools:context=".presenter.iu.fragment.CurrencyListFragment">
 
         <LinearLayout
             android:layout_width="match_parent"

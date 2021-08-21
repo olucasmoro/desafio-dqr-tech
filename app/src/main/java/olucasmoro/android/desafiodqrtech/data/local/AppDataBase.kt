@@ -12,7 +12,7 @@ abstract class AppDataBase : RoomDatabase() {
     abstract fun getDao(): AppDao
 
     companion object {
-        private const val DB_NAME = "datadb.db"
+        private const val DB_NAME = "converter.db"
 
         @Volatile
         private var INSTANCE: AppDataBase? = null
